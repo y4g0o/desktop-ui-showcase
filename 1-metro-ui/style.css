@@ -1,0 +1,106 @@
+/* ======= Metro UI — Design Web N2 — Yago Macambira ======= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1a1a2e;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  padding: 32px;
+}
+
+h1.titulo {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+  color: #e0e0ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 6px;
+}
+
+/* --- tiles --- */
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.15s;
+  user-select: none;
+}
+
+.tile:hover { filter: brightness(1.15); }
+.tile:active { filter: brightness(0.85); }
+
+/* tile widths */
+.tile-wide  { grid-column: span 2; }
+.tile-tall  { grid-row: span 2; }
+
+/* colour themes */
+.t-blue      { background: #1e6eb4; }
+.t-teal      { background: #00897b; }
+.t-green     { background: #2e7d32; }
+.t-purple    { background: #6a1b9a; }
+.t-red       { background: #c62828; }
+.t-orange    { background: #e65100; }
+.t-pink      { background: #ad1457; }
+.t-indigo    { background: #283593; }
+.t-cyan      { background: #0277bd; }
+.t-dark      { background: #263238; }
+
+/* icon area */
+.tile-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+  line-height: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.tile-wide .tile-icon { font-size: 2.4rem; }
+
+.tile-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* badge */
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 2px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 1px 5px;
+}
+
+/* special tile: wide + live info */
+.tile-live .live-info {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.8);
+  margin-top: 2px;
+}
