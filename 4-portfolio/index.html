@@ -15,41 +15,49 @@
       <button class="ws">3</button>
       <button class="ws">4</button>
     </div>
-    <div class="wb-centro">fastfetch</div>
+    <div class="wb-centro">fastfetch · kitty</div>
     <div class="wb-dir">
       <!-- cpu -->
       <span class="modulo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
           <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
           <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
           <line x1="20" y1="9" x2="23" y2="9"/><line x1="1" y1="9" x2="4" y2="9"/>
           <line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="14" x2="4" y2="14"/>
         </svg>
-        12%
+        47%
       </span>
       <!-- ram -->
       <span class="modulo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="1" y="6" width="22" height="12" rx="2"/>
           <line x1="6" y1="6" x2="6" y2="18"/><line x1="10" y1="6" x2="10" y2="18"/>
           <line x1="14" y1="6" x2="14" y2="18"/><line x1="18" y1="6" x2="18" y2="18"/>
         </svg>
         3.8G
       </span>
+      <!-- disco -->
+      <span class="modulo">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="12" cy="12" rx="10" ry="10"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        256G
+      </span>
       <!-- volume -->
       <span class="modulo">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
           <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
         </svg>
         60%
       </span>
       <!-- relogio -->
-      <span class="modulo relogio">Sáb 16 jun · 23:00</span>
+      <span class="modulo relogio">Seg 16 jun &nbsp;·&nbsp; 23:07</span>
       <!-- power -->
       <span class="modulo poder">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
           <line x1="12" y1="2" x2="12" y2="12"/>
         </svg>
@@ -57,70 +65,109 @@
     </div>
   </nav>
 
-  <!-- area onde ficam as janelas -->
+  <!-- área de janelas tiladas -->
   <div class="area">
 
-    <!-- janela fastfetch — coluna da esquerda, altura total -->
-    <div class="janela focada" id="j-fetch">
-      <div class="titlebar">
-        <span class="titulo-janela">» fastfetch</span>
-        <div class="dots">
-          <span class="dot fechar"></span>
-          <span class="dot minimizar"></span>
-          <span class="dot maximizar"></span>
-        </div>
-      </div>
-      <div class="conteudo fetch-conteudo">
-        <!-- logo pop!_os simplificado em SVG -->
-        <svg class="logo-distro" viewBox="0 0 80 80" fill="none">
-          <circle cx="40" cy="40" r="34" stroke="#f7768e" stroke-width="5"/>
-          <line x1="40" y1="6" x2="40" y2="22" stroke="#f7768e" stroke-width="5" stroke-linecap="round"/>
-          <path d="M26 62 Q40 74 54 62" fill="none" stroke="#f7768e" stroke-width="4" stroke-linecap="round"/>
-        </svg>
+    <!-- coluna esquerda: fastfetch + terminal kitty -->
+    <div class="col-esq">
 
-        <div class="fetch-info">
-          <p class="fetch-user"><span class="cor-blue">yago</span><span class="cor-fg">@</span><span class="cor-cyan">y4g0pop-os</span></p>
-          <p class="separador">─────────────────</p>
-          <p><span class="chave">OS     </span><span class="valor">Pop!_OS 24.04 LTS</span></p>
-          <p><span class="chave">WM     </span><span class="valor cor-purple">Hyprland</span></p>
-          <p><span class="chave">Shell  </span><span class="valor">fish</span></p>
-          <p><span class="chave">Editor </span><span class="valor">nvim</span></p>
-          <p><span class="chave">Kernel </span><span class="valor">7.0.11-pop</span></p>
-          <p><span class="chave">Repos  </span><span class="valor">12 públicos</span></p>
-          <p><span class="chave">Langs  </span><span class="valor">Python · JS · C</span></p>
-          <p><span class="chave">Foco   </span><span class="valor">IA · multi-agentes · web</span></p>
-          <p class="separador">─────────────────</p>
-          <!-- barra de cores do tema tokyo night -->
-          <div class="cor-bar">
-            <span style="background:#1a1b26"></span>
-            <span style="background:#f7768e"></span>
-            <span style="background:#9ece6a"></span>
-            <span style="background:#e0af68"></span>
-            <span style="background:#7aa2f7"></span>
-            <span style="background:#bb9af7"></span>
-            <span style="background:#7dcfff"></span>
-            <span style="background:#c0caf5"></span>
+      <!-- janela fastfetch — focada -->
+      <div class="janela focada" id="j-fetch">
+        <div class="titlebar">
+          <span class="titulo-janela">» fastfetch</span>
+          <div class="dots">
+            <span class="dot fechar"></span>
+            <span class="dot minimizar"></span>
+            <span class="dot maximizar"></span>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="conteudo fetch-conteudo">
+          <!-- logo pop!_os em SVG -->
+          <svg class="logo-distro" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="34" stroke="#f7768e" stroke-width="5"/>
+            <line x1="40" y1="6" x2="40" y2="22" stroke="#f7768e" stroke-width="5" stroke-linecap="round"/>
+            <path d="M26 62 Q40 74 54 62" fill="none" stroke="#f7768e" stroke-width="4" stroke-linecap="round"/>
+          </svg>
 
-    <!-- coluna da direita: projetos + design web -->
+          <div class="fetch-info">
+            <p class="fetch-user">
+              <span class="cor-blue">yago</span><span class="cor-fg">@</span><span class="cor-cyan">y4g0pop-os</span>
+            </p>
+            <p class="separador">─────────────────────</p>
+            <p><span class="chave">OS     </span><span class="valor">Pop!_OS 24.04 LTS x86_64</span></p>
+            <p><span class="chave">WM     </span><span class="valor cor-purple">Hyprland 0.41</span></p>
+            <p><span class="chave">Shell  </span><span class="valor">fish 3.7.1</span></p>
+            <p><span class="chave">Terminal</span><span class="valor">kitty 0.36</span></p>
+            <p><span class="chave">Editor </span><span class="valor">nvim 0.10.2</span></p>
+            <p><span class="chave">Kernel </span><span class="valor">7.0.11-76070011-generic</span></p>
+            <p><span class="chave">Uptime </span><span class="valor">4h 12m</span></p>
+            <p><span class="chave">Mem    </span><span class="valor">3.8G / 16.0G</span></p>
+            <p><span class="chave">Disk   </span><span class="valor">68G / 476G (14%)</span></p>
+            <p><span class="chave">Repos  </span><span class="valor cor-green">12 públicos</span></p>
+            <p><span class="chave">Langs  </span><span class="valor">Python · JS · C</span></p>
+            <p><span class="chave">Foco   </span><span class="valor">IA · multi-agentes · web</span></p>
+            <p class="separador">─────────────────────</p>
+            <!-- barra de 8 cores do tokyo night -->
+            <div class="cor-bar">
+              <span style="background:#1a1b26"></span>
+              <span style="background:#f7768e"></span>
+              <span style="background:#9ece6a"></span>
+              <span style="background:#e0af68"></span>
+              <span style="background:#7aa2f7"></span>
+              <span style="background:#bb9af7"></span>
+              <span style="background:#7dcfff"></span>
+              <span style="background:#c0caf5"></span>
+            </div>
+          </div>
+        </div>
+      </div><!-- fim fastfetch -->
+
+      <!-- janela kitty — benchmark CDH em execução -->
+      <div class="janela" id="j-term">
+        <div class="titlebar">
+          <span class="titulo-janela">» kitty — ~/projetos/C-D-H</span>
+          <div class="dots">
+            <span class="dot fechar"></span>
+            <span class="dot minimizar"></span>
+            <span class="dot maximizar"></span>
+          </div>
+        </div>
+        <div class="conteudo term-conteudo">
+          <p class="term-prompt"><span class="t-green">yago@y4g0pop-os</span><span class="t-fg">:</span><span class="t-blue">~/projetos/C-D-H</span><span class="t-fg">$</span> <span class="t-cmd">python benchmark.py --ollama --modelos 7</span></p>
+          <p class="term-info">[2025-06-16 23:07:18] iniciando CDH benchmark · 12 conversas por modelo</p>
+          <p class="term-sep">──────────────────────────────────────────────────</p>
+          <p class="term-linha"><span class="t-label">[CDH-1]</span> <span class="t-model">llama3.2:3b  </span> <span class="t-score cor-green">score=0.94</span> <span class="t-bar">█████████░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-2]</span> <span class="t-model">mistral:7b   </span> <span class="t-score cor-yellow">score=0.88</span> <span class="t-bar">████████░░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-3]</span> <span class="t-model">qwen2.5:7b   </span> <span class="t-score cor-green">score=0.91</span> <span class="t-bar">█████████░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-4]</span> <span class="t-model">phi3:medium  </span> <span class="t-score t-comment">score=0.76</span> <span class="t-bar t-comment">████████░░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-5]</span> <span class="t-model">gemma2:9b    </span> <span class="t-score cor-yellow">score=0.85</span> <span class="t-bar">████████░░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-6]</span> <span class="t-model">deepseek-r1  </span> <span class="t-score cor-green">score=0.93</span> <span class="t-bar">█████████░</span></p>
+          <p class="term-linha"><span class="t-label">[CDH-7]</span> <span class="t-model">solar-pro    </span> <span class="t-score cor-yellow">score=0.89</span> <span class="t-bar">████████░░</span></p>
+          <p class="term-sep">──────────────────────────────────────────────────</p>
+          <p class="term-result"><span class="t-ok">[OK]</span> média: <span class="cor-green">0.882</span> &nbsp;·&nbsp; melhor: llama3.2:3b (0.94) &nbsp;·&nbsp; tempo: 47.3s</p>
+          <p class="term-cursor"><span class="t-green">yago@y4g0pop-os</span><span class="t-fg">:</span><span class="t-blue">~/projetos/C-D-H</span><span class="t-fg">$</span> <span class="cursor-blink">▋</span></p>
+        </div>
+      </div><!-- fim kitty -->
+
+    </div><!-- fim col-esq -->
+
+    <!-- coluna direita: projetos + design web -->
     <div class="col-dir">
 
       <!-- linha 1 de projetos -->
       <div class="linha-proj">
-        <div class="janela" id="j-cdh">
+        <div class="janela focada-cyan" id="j-cdh">
           <div class="titlebar">
             <span class="titulo-janela">» C-D-H</span>
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
-            <p class="proj-desc">Sistema multi-agente LangGraph implementando o Ciclo de Desambiguação Hierárquica (CDH). Benchmarked em 7 LLMs locais via Ollama.</p>
+            <p class="proj-titulo">C-D-H — Ciclo de Desambiguação Hierárquica</p>
+            <p class="proj-desc">Sistema multi-agente LangGraph implementando o CDH. Benchmarked em 7 LLMs locais via Ollama — base do TCC.</p>
             <div class="proj-tags">
-              <span class="tag">LangGraph</span><span class="tag">multi-agente</span><span class="tag">TCC</span><span class="tag">Python</span>
+              <span class="tag">LangGraph</span><span class="tag">multi-agente</span><span class="tag tag-destaque">TCC</span><span class="tag">Python</span>
             </div>
-            <a class="proj-link" href="https://github.com/y4g0o/C-D-H">github.com/y4g0o/C-D-H</a>
+            <a class="proj-link" href="#">github.com/y4g0o/C-D-H</a>
           </div>
         </div>
 
@@ -130,28 +177,30 @@
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
-            <p class="proj-desc">Implementação e testes do ciclo de desambiguação hierárquica. Variações do protocolo CDH em diferentes configs de agentes.</p>
+            <p class="proj-titulo">C-D-A — Desambiguação Adaptativa</p>
+            <p class="proj-desc">Variações do protocolo CDH em diferentes configurações de agentes. Testes e métricas comparativas de LLMs.</p>
             <div class="proj-tags">
-              <span class="tag">desambiguação</span><span class="tag">LLM</span><span class="tag">JS</span>
+              <span class="tag">desambiguação</span><span class="tag">LLM</span><span class="tag">JavaScript</span>
             </div>
-            <a class="proj-link" href="https://github.com/y4g0o/C-D-A">github.com/y4g0o/C-D-A</a>
+            <a class="proj-link" href="#">github.com/y4g0o/C-D-A</a>
           </div>
         </div>
       </div>
 
       <!-- linha 2 de projetos -->
       <div class="linha-proj">
-        <div class="janela" id="j-tabnews">
+        <div class="janela focada-purple" id="j-tabnews">
           <div class="titlebar">
             <span class="titulo-janela">» clone-tabnews</span>
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
-            <p class="proj-desc">App full-stack do zero inspirado no TabNews. Projeto pessoal pra aprimorar conhecimento em JS moderno.</p>
+            <p class="proj-titulo">clone-tabnews</p>
+            <p class="proj-desc">App full-stack do zero inspirado no TabNews. JS moderno, foco em arquitetura e boas práticas de backend.</p>
             <div class="proj-tags">
               <span class="tag">full-stack</span><span class="tag">JavaScript</span><span class="tag">do zero</span>
             </div>
-            <a class="proj-link" href="https://github.com/y4g0o/clone-tabnews">github.com/y4g0o/clone-tabnews</a>
+            <a class="proj-link" href="#">github.com/y4g0o/clone-tabnews</a>
           </div>
         </div>
 
@@ -161,11 +210,12 @@
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
+            <p class="proj-titulo">lab — experimentos</p>
             <p class="proj-desc">Estudos pessoais, experimentos com agentes locais e automações. Repositório de aprendizado contínuo.</p>
             <div class="proj-tags">
               <span class="tag">experimentos</span><span class="tag">Python</span><span class="tag">IA local</span>
             </div>
-            <a class="proj-link" href="https://github.com/y4g0o/lab">github.com/y4g0o/lab</a>
+            <a class="proj-link" href="#">github.com/y4g0o/lab</a>
           </div>
         </div>
       </div>
@@ -178,32 +228,34 @@
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
-            <p class="proj-desc">Compilador académico para a linguagem yagolang. Análise léxica e sintática em Lex/Yacc.</p>
+            <p class="proj-titulo">compilador — yagolang</p>
+            <p class="proj-desc">Compilador acadêmico para a linguagem yagolang. Análise léxica e sintática com Lex/Yacc, em C.</p>
             <div class="proj-tags">
               <span class="tag">compiladores</span><span class="tag">Lex/Yacc</span><span class="tag">C</span>
             </div>
           </div>
         </div>
 
-        <div class="janela" id="j-ia">
+        <div class="janela focada-yellow" id="j-ia">
           <div class="titlebar">
             <span class="titulo-janela">» ia-assistente-pessoal</span>
             <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
           </div>
           <div class="conteudo proj-conteudo">
-            <p class="proj-desc">Assistente de IA pessoal automatizado para tarefas do dia a dia.</p>
+            <p class="proj-titulo">ia-assistente-pessoal</p>
+            <p class="proj-desc">Assistente de IA pessoal para automações do dia a dia. Integração com APIs locais e remotas.</p>
             <div class="proj-tags">
               <span class="tag">automação</span><span class="tag">IA</span><span class="tag">PowerShell</span>
             </div>
-            <a class="proj-link" href="https://github.com/y4g0o/ia-assistente-pessoal">github.com/y4g0o/ia-assistente</a>
+            <a class="proj-link" href="#">github.com/y4g0o/ia-assistente-pessoal</a>
           </div>
         </div>
       </div>
 
-      <!-- janela larga: disciplina design web (N1 e N2) -->
-      <div class="janela" id="j-dw">
+      <!-- janela larga: disciplina design web — N1 e N2 -->
+      <div class="janela focada-green" id="j-dw">
         <div class="titlebar">
-          <span class="titulo-janela">» Design Web — N1 &amp; N2</span>
+          <span class="titulo-janela">» Design Web — trabalhos N1 &amp; N2</span>
           <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
         </div>
         <div class="conteudo dw-conteudo">
@@ -219,14 +271,9 @@
             <img src="../3-app-componentes/screenshot.png" alt="App Componentes" class="dw-thumb" />
             <span class="dw-label">N2 · App (SolidJS)</span>
           </div>
-          <div class="dw-item dw-n1">
-            <div class="dw-n1-placeholder">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-              </svg>
-              <a href="https://github.com/y4g0o/Trabalho-desingweb" class="proj-link">Trabalho-desingweb</a>
-            </div>
-            <span class="dw-label">N1 · Telas HTML/CSS</span>
+          <div class="dw-item">
+            <img src="n1-screenshot.png" alt="N1 Layout Colorido" class="dw-thumb" />
+            <span class="dw-label">N1 · Layout Colorido</span>
           </div>
         </div>
       </div>

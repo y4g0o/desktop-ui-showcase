@@ -18,30 +18,35 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* tela inteira — travado em 1440×900 como screenshot de desktop */
+/* tela travada em 1440×900 — desktop screenshot */
 body.desktop {
   width: 1440px;
   height: 900px;
   overflow: hidden;
-  background: radial-gradient(ellipse at 30% 60%, #1f2335 0%, #1a1b26 70%);
+  /* fundo com gradiente + padrão de pontos sutil */
+  background:
+    radial-gradient(circle, rgba(122, 162, 247, 0.07) 1px, transparent 1px) 0 0 / 28px 28px,
+    radial-gradient(circle, rgba(187, 154, 247, 0.04) 1px, transparent 1px) 14px 14px / 28px 28px,
+    radial-gradient(ellipse at 25% 65%, #1f2335 0%, #1a1b26 70%);
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--tn-fg);
 }
 
 /* ---- waybar ---- */
 .waybar {
   height: 32px;
-  background: rgba(26, 27, 38, 0.92);
+  background: rgba(26, 27, 38, 0.95);
   border-bottom: 1px solid var(--tn-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 14px;
   gap: 12px;
+  position: relative;
+  z-index: 10;
 }
 
-/* workspaces — pills */
 .wb-esq { display: flex; gap: 4px; }
 
 .ws {
@@ -66,18 +71,16 @@ body.desktop {
   font-weight: 700;
 }
 
-/* titulo da janela no centro */
 .wb-centro {
   color: var(--tn-comment);
   font-size: 11px;
   letter-spacing: 0.3px;
 }
 
-/* modulos da direita */
 .wb-dir {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .modulo {
@@ -87,7 +90,7 @@ body.desktop {
   background: var(--tn-bg2);
   border: 1px solid var(--tn-border);
   border-radius: 5px;
-  padding: 1px 7px;
+  padding: 2px 8px;
   color: var(--tn-fg);
   font-size: 11px;
   height: 22px;
@@ -96,7 +99,7 @@ body.desktop {
 .modulo.relogio { color: var(--tn-yellow); }
 .modulo.poder   { cursor: pointer; color: var(--tn-red); }
 
-/* ---- area de janelas ---- */
+/* ---- área de janelas ---- */
 .area {
   display: grid;
   grid-template-columns: 295px 1fr;
@@ -105,7 +108,15 @@ body.desktop {
   height: calc(900px - 32px);
 }
 
-/* ---- janelas ---- */
+/* coluna esquerda — 2 janelas empilhadas */
+.col-esq {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  gap: 8px;
+  min-height: 0;
+}
+
+/* ---- janelas base ---- */
 .janela {
   background: var(--tn-bg2);
   border: 1px solid var(--tn-border);
@@ -113,15 +124,37 @@ body.desktop {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
-/* janela focada tem borda accent */
+/* janela focada (azul) */
 .janela.focada {
   border-color: var(--tn-blue);
-  box-shadow: 0 0 0 1px var(--tn-blue);
+  box-shadow: 0 0 0 1px var(--tn-blue), 0 4px 20px rgba(122, 162, 247, 0.12);
 }
 
-/* titlebar de cada janela */
+/* variações de cor por janela */
+.janela.focada-cyan {
+  border-color: var(--tn-cyan);
+  box-shadow: 0 0 0 1px var(--tn-cyan), 0 4px 20px rgba(125, 207, 255, 0.1);
+}
+
+.janela.focada-purple {
+  border-color: var(--tn-purple);
+  box-shadow: 0 0 0 1px var(--tn-purple), 0 4px 20px rgba(187, 154, 247, 0.1);
+}
+
+.janela.focada-yellow {
+  border-color: var(--tn-yellow);
+  box-shadow: 0 0 0 1px var(--tn-yellow), 0 4px 20px rgba(224, 175, 104, 0.1);
+}
+
+.janela.focada-green {
+  border-color: var(--tn-green);
+  box-shadow: 0 0 0 1px var(--tn-green), 0 4px 20px rgba(158, 206, 106, 0.1);
+}
+
+/* titlebar */
 .titlebar {
   height: 28px;
   background: var(--tn-bg3);
@@ -134,90 +167,141 @@ body.desktop {
 }
 
 .titulo-janela {
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--tn-comment);
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
 }
 
-/* bolinhas de fechar/minimizar/maximizar */
+/* dots */
 .dots { display: flex; gap: 5px; }
 
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  display: inline-block;
 }
 
 .dot.fechar    { background: var(--tn-red); }
 .dot.minimizar { background: var(--tn-yellow); }
 .dot.maximizar { background: var(--tn-green); }
 
-/* conteudo interno */
+/* conteudo interno padrão */
 .conteudo {
   flex: 1;
   overflow: hidden;
   padding: 12px 14px;
+  min-height: 0;
 }
 
 /* ---- fastfetch ---- */
-#j-fetch {
-  height: 100%;
-}
-
 .fetch-conteudo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 16px 14px;
+  gap: 14px;
+  padding: 18px 14px 14px;
+  height: 100%;
 }
 
 .logo-distro {
-  width: 64px;
-  height: 64px;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
 }
 
 .fetch-info {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  font-size: 11.5px;
+  gap: 4px;
+  font-size: 12px;
 }
 
-.fetch-user { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.fetch-user {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
 
-.separador { color: var(--tn-border); margin: 2px 0; }
+.separador { color: var(--tn-border); margin: 3px 0; }
 
-.chave  { color: var(--tn-comment); display: inline-block; width: 68px; }
+.chave  { color: var(--tn-comment); display: inline-block; width: 74px; }
 .valor  { color: var(--tn-fg); }
 
 .cor-blue   { color: var(--tn-blue); }
 .cor-cyan   { color: var(--tn-cyan); }
 .cor-fg     { color: var(--tn-fg); }
 .cor-purple { color: var(--tn-purple); }
+.cor-green  { color: var(--tn-green); }
+.cor-yellow { color: var(--tn-yellow); }
 
-/* barra de 8 cores do tema */
+/* barra de 8 cores */
 .cor-bar {
   display: flex;
-  gap: 3px;
-  margin-top: 6px;
+  gap: 4px;
+  margin-top: 8px;
 }
 
 .cor-bar span {
-  width: 22px;
-  height: 14px;
-  border-radius: 2px;
+  width: 26px;
+  height: 16px;
+  border-radius: 3px;
   border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ---- terminal / kitty ---- */
+.term-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 14px;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+.term-prompt, .term-cursor { font-size: 11px; }
+
+.t-green   { color: var(--tn-green); }
+.t-blue    { color: var(--tn-blue); }
+.t-fg      { color: var(--tn-fg); }
+.t-comment { color: var(--tn-comment); }
+.t-cmd     { color: var(--tn-fg); }
+
+.term-info { color: var(--tn-comment); font-size: 10.5px; }
+.term-sep  { color: var(--tn-border); font-size: 10.5px; }
+
+.term-linha {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.t-label  { color: var(--tn-comment); width: 52px; flex-shrink: 0; }
+.t-model  { color: var(--tn-fg); width: 90px; flex-shrink: 0; font-family: inherit; }
+.t-score  { width: 70px; flex-shrink: 0; }
+.t-bar    { color: var(--tn-blue); letter-spacing: -1px; }
+
+.term-result { color: var(--tn-fg); margin-top: 1px; font-size: 11px; }
+.t-ok { color: var(--tn-green); }
+
+.cursor-blink {
+  color: var(--tn-blue);
+  animation: pisca 1s step-end infinite;
+}
+
+@keyframes pisca {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
 /* ---- coluna direita ---- */
 .col-dir {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 160px;
+  grid-template-rows: 1fr 1fr 1fr 172px;
   gap: 8px;
   height: 100%;
+  min-height: 0;
 }
 
 /* linhas de dois projetos lado a lado */
@@ -225,19 +309,26 @@ body.desktop {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  min-height: 0;
 }
 
-/* conteudo dos cards de projeto */
+/* conteúdo dos cards de projeto */
 .proj-conteudo {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 
+.proj-titulo {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--tn-fg);
+}
+
 .proj-desc {
   font-size: 11px;
   color: var(--tn-comment);
-  line-height: 1.5;
+  line-height: 1.55;
   flex: 1;
 }
 
@@ -252,24 +343,28 @@ body.desktop {
   color: var(--tn-blue);
 }
 
+.tag.tag-destaque {
+  border-color: var(--tn-yellow);
+  color: var(--tn-yellow);
+}
+
 .proj-link {
-  font-size: 10px;
+  font-size: 10.5px;
   color: var(--tn-cyan);
   text-decoration: none;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .proj-link:hover { opacity: 1; text-decoration: underline; }
 
-/* ---- janela design web (embaixo, larga) ---- */
-#j-dw { /* a row é 160px fixo */ }
-
+/* ---- janela design web (larga, embaixo) ---- */
 .dw-conteudo {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-start;
-  padding: 10px 12px;
+  padding: 10px 14px;
   overflow: hidden;
+  height: 100%;
 }
 
 .dw-item {
@@ -282,30 +377,15 @@ body.desktop {
 
 .dw-thumb {
   width: 100%;
-  height: 88px;
+  height: 96px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 5px;
   border: 1px solid var(--tn-border);
 }
 
 .dw-label {
-  font-size: 9.5px;
+  font-size: 10px;
   color: var(--tn-comment);
   text-align: center;
   white-space: nowrap;
-}
-
-/* N1 nao tem screenshot — placeholder com icone */
-.dw-n1-placeholder {
-  width: 100%;
-  height: 88px;
-  background: var(--tn-bg3);
-  border: 1px solid var(--tn-border);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  color: var(--tn-comment);
 }

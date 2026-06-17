@@ -7,131 +7,190 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Catálogo de Jogos</h1>
+  <div class="pagina">
 
-  <div class="tabela-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Título</th>
-          <th>Gênero</th>
-          <th>Ano</th>
-          <th>Plataforma</th>
-          <th>Avaliação</th>
-          <th>Zerado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><strong>The Legend of Zelda: BotW</strong></td>
-          <td><span class="badge badge-acao">Ação</span></td>
-          <td>2017</td>
-          <td>Switch</td>
-          <td><span class="estrelas">★★★★★</span></td>
-          <td class="check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><strong>Hollow Knight</strong></td>
-          <td><span class="badge badge-indie">Indie</span></td>
-          <td>2017</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★★</span></td>
-          <td class="check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><strong>Elden Ring</strong></td>
-          <td><span class="badge badge-rpg">RPG</span></td>
-          <td>2022</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★★</span></td>
-          <td class="cross">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><strong>Celeste</strong></td>
-          <td><span class="badge badge-plat">Plataforma</span></td>
-          <td>2018</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★<span class="vazia">★</span></span></td>
-          <td class="check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><strong>FIFA 24</strong></td>
-          <td><span class="badge badge-sport">Esporte</span></td>
-          <td>2023</td>
-          <td>PS5</td>
-          <td><span class="estrelas">★★★<span class="vazia">★★</span></span></td>
-          <td class="cross">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td><strong>Portal 2</strong></td>
-          <td><span class="badge badge-puzzle">Puzzle</span></td>
-          <td>2011</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★★</span></td>
-          <td class="check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td><strong>Hades</strong></td>
-          <td><span class="badge badge-acao">Ação</span></td>
-          <td>2020</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★★</span></td>
-          <td class="check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-          </td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td><strong>Undertale</strong></td>
-          <td><span class="badge badge-indie">Indie</span></td>
-          <td>2015</td>
-          <td>PC</td>
-          <td><span class="estrelas">★★★★<span class="vazia">★</span></span></td>
-          <td class="cross">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"/>
-              <line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <header class="cabecalho">
+      <div class="ico-controle">
+        <!-- gamepad — desenhado na mão, sem emoji -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="6" y1="12" x2="10" y2="12"/>
+          <line x1="8" y1="10" x2="8" y2="14"/>
+          <circle cx="15.5" cy="11" r="0.5" fill="currentColor"/>
+          <circle cx="17.5" cy="13" r="0.5" fill="currentColor"/>
+          <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59l-.9 9A4 4 0 0 0 5.77 22h12.46a4 4 0 0 0 3.978-4.41l-.9-9A4 4 0 0 0 17.32 5z"/>
+        </svg>
+      </div>
+      <div class="titulo-area">
+        <h1>Catálogo de Jogos</h1>
+        <span class="meta">8 títulos &nbsp;·&nbsp; avaliação pessoal &nbsp;·&nbsp; 2011 – 2023</span>
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-num">6</span>
+          <span class="stat-rot">zerados</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat-item">
+          <span class="stat-num">4.6</span>
+          <span class="stat-rot">média ★</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="th-c">#</th>
+            <th>Título</th>
+            <th>Gênero</th>
+            <th>Plataforma</th>
+            <th>Avaliação</th>
+            <th class="th-c">Horas</th>
+            <th class="th-c">Zerado</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="tr-destaque">
+            <td class="td-c td-num">1</td>
+            <td class="td-titulo"><strong>The Legend of Zelda: BotW</strong></td>
+            <td><span class="badge genero-acao">Ação</span></td>
+            <td><span class="plat plat-switch">Switch</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span>
+            </td>
+            <td class="td-c td-horas">85h</td>
+            <td class="td-c td-icon check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr class="tr-destaque">
+            <td class="td-c td-num">2</td>
+            <td class="td-titulo"><strong>Hollow Knight</strong></td>
+            <td><span class="badge genero-indie">Indie</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span>
+            </td>
+            <td class="td-c td-horas">45h</td>
+            <td class="td-c td-icon check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr class="tr-destaque">
+            <td class="td-c td-num">3</td>
+            <td class="td-titulo"><strong>Elden Ring</strong></td>
+            <td><span class="badge genero-rpg">RPG</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span>
+            </td>
+            <td class="td-c td-horas">62h</td>
+            <td class="td-c td-icon cross">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td-c td-num">4</td>
+            <td class="td-titulo"><strong>Celeste</strong></td>
+            <td><span class="badge genero-plat">Plataforma</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-vazia">★</span>
+            </td>
+            <td class="td-c td-horas">30h</td>
+            <td class="td-c td-icon check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td-c td-num">5</td>
+            <td class="td-titulo"><strong>FIFA 24</strong></td>
+            <td><span class="badge genero-sport">Esporte</span></td>
+            <td><span class="plat plat-ps5">PS5</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-vazia">★</span><span class="estrela s-vazia">★</span>
+            </td>
+            <td class="td-c td-horas">20h</td>
+            <td class="td-c td-icon cross">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr class="tr-destaque">
+            <td class="td-c td-num">6</td>
+            <td class="td-titulo"><strong>Portal 2</strong></td>
+            <td><span class="badge genero-puzzle">Puzzle</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span>
+            </td>
+            <td class="td-c td-horas">12h</td>
+            <td class="td-c td-icon check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr class="tr-destaque">
+            <td class="td-c td-num">7</td>
+            <td class="td-titulo"><strong>Hades</strong></td>
+            <td><span class="badge genero-acao">Ação</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span>
+            </td>
+            <td class="td-c td-horas">55h</td>
+            <td class="td-c td-icon check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="td-c td-num">8</td>
+            <td class="td-titulo"><strong>Undertale</strong></td>
+            <td><span class="badge genero-indie">Indie</span></td>
+            <td><span class="plat plat-pc">PC</span></td>
+            <td class="td-stars">
+              <span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-cheia">★</span><span class="estrela s-vazia">★</span>
+            </td>
+            <td class="td-c td-horas">8h</td>
+            <td class="td-c td-icon cross">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="rodape">
+      Yago Macambira &nbsp;·&nbsp; Design Web N2 &nbsp;·&nbsp; 2025
+    </footer>
+
   </div>
 </body>
 </html>
