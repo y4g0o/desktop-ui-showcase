@@ -2,201 +2,238 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio – Yago Macambira</title>
+  <title>yago@y4g0pop-os – portfólio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="desktop">
 
-  <!-- ======= HEADER ======= -->
-  <header>
-    <div class="avatar">👨‍💻</div>
-    <h1>Yago Macambira</h1>
-    <a class="handle" href="https://github.com/y4g0o" target="_blank">@y4g0o</a>
-    <p class="bio">
-      Estudante de Ciência da Computação. Apaixonado por IA, sistemas multi-agentes,
-      automação e desenvolvimento web. Esse GitHub é sobre projetos da faculdade e projetos pessoais. ^-^
-    </p>
-    <div class="header-meta">
-      <span>🎓 Ciência da Computação</span>
-      <span>📁 12 repositórios</span>
-      <span>🐍 Python &amp; JavaScript</span>
+  <!-- waybar no topo -->
+  <nav class="waybar">
+    <div class="wb-esq">
+      <button class="ws ativo">1</button>
+      <button class="ws">2</button>
+      <button class="ws">3</button>
+      <button class="ws">4</button>
     </div>
-  </header>
+    <div class="wb-centro">fastfetch</div>
+    <div class="wb-dir">
+      <!-- cpu -->
+      <span class="modulo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+          <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+          <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+          <line x1="20" y1="9" x2="23" y2="9"/><line x1="1" y1="9" x2="4" y2="9"/>
+          <line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="14" x2="4" y2="14"/>
+        </svg>
+        12%
+      </span>
+      <!-- ram -->
+      <span class="modulo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="6" width="22" height="12" rx="2"/>
+          <line x1="6" y1="6" x2="6" y2="18"/><line x1="10" y1="6" x2="10" y2="18"/>
+          <line x1="14" y1="6" x2="14" y2="18"/><line x1="18" y1="6" x2="18" y2="18"/>
+        </svg>
+        3.8G
+      </span>
+      <!-- volume -->
+      <span class="modulo">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        60%
+      </span>
+      <!-- relogio -->
+      <span class="modulo relogio">Sáb 16 jun · 23:00</span>
+      <!-- power -->
+      <span class="modulo poder">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+          <line x1="12" y1="2" x2="12" y2="12"/>
+        </svg>
+      </span>
+    </div>
+  </nav>
 
-  <main>
+  <!-- area onde ficam as janelas -->
+  <div class="area">
 
-    <!-- ======= PROJETOS PRINCIPAIS ======= -->
-    <section>
-      <h2 class="section-title">🚀 Projetos Principais</h2>
-      <div class="grid">
-
-        <!-- C-D-H -->
-        <a class="card" href="https://github.com/y4g0o/C-D-H" target="_blank">
-          <div class="card-title">🧠 C-D-H</div>
-          <p class="card-desc">
-            Sistema multi-agente LangGraph implementando o Ciclo de Desambiguação Hierárquica (CDH).
-            Supervisor desambigua objetivos ambíguos antes de delegar aos Workers especializados.
-            Benchmarked em 7 LLMs locais via Ollama com CDH vs CoT-Baseline vs Baseline.
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-python"></span> Python / JavaScript
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">LangGraph</span>
-            <span class="tag">Multi-Agente</span>
-            <span class="tag">NLP</span>
-            <span class="tag">Benchmark</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">TCC</span>
-          </div>
-        </a>
-
-        <!-- C-D-A -->
-        <a class="card" href="https://github.com/y4g0o/C-D-A" target="_blank">
-          <div class="card-title">🔄 C-D-A</div>
-          <p class="card-desc">
-            Implementação e testes do ciclo de desambiguação hierárquica (versão de pesquisa).
-            Experimenta variações do protocolo CDH em diferentes configurações de agentes.
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-js"></span> JavaScript
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">Desambiguação</span>
-            <span class="tag">Agentes</span>
-            <span class="tag">LLM</span>
-          </div>
-        </a>
-
-        <!-- clone-tabnews -->
-        <a class="card" href="https://github.com/y4g0o/clone-tabnews" target="_blank">
-          <div class="card-title">📰 Clone TabNews</div>
-          <p class="card-desc">
-            Projeto pessoal para aperfeiçoar conhecimentos em programação criando
-            uma aplicação completa do zero, inspirada no TabNews.
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-js"></span> JavaScript
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">Full-Stack</span>
-            <span class="tag">Do Zero</span>
-            <span class="tag">Web</span>
-          </div>
-        </a>
-
-        <!-- lab -->
-        <a class="card" href="https://github.com/y4g0o/lab" target="_blank">
-          <div class="card-title">🔬 Lab</div>
-          <p class="card-desc">
-            Estudos pessoais, experimentos com agentes locais e automações diversas.
-            Repositório de aprendizado contínuo.
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-python"></span> Python
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">Experimentos</span>
-            <span class="tag">Automação</span>
-            <span class="tag">IA Local</span>
-          </div>
-        </a>
-
-        <!-- ia-assistente-pessoal -->
-        <a class="card" href="https://github.com/y4g0o/ia-assistente-pessoal" target="_blank">
-          <div class="card-title">🤖 IA Assistente Pessoal</div>
-          <p class="card-desc">
-            Assistente de IA pessoal automatizado. Integração de modelos de linguagem
-            para tarefas do dia a dia.
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-ps"></span> PowerShell
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">IA</span>
-            <span class="tag">Automação</span>
-            <span class="tag">Produtividade</span>
-          </div>
-        </a>
-
-        <!-- compilador -->
-        <a class="card" href="#" target="_blank">
-          <div class="card-title">⚙️ Compilador (yagolang)</div>
-          <p class="card-desc">
-            Compilador acadêmico para uma linguagem própria (yagolang) implementado
-            em Lex/Yacc (análise léxica e sintática completas).
-          </p>
-          <div class="card-footer">
-            <div class="lang">
-              <span class="lang-dot dot-c"></span> C / Lex / Yacc
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">Compiladores</span>
-            <span class="tag">Lex/Yacc</span>
-            <span class="tag">Faculdade</span>
-          </div>
-        </a>
-
+    <!-- janela fastfetch — coluna da esquerda, altura total -->
+    <div class="janela focada" id="j-fetch">
+      <div class="titlebar">
+        <span class="titulo-janela">» fastfetch</span>
+        <div class="dots">
+          <span class="dot fechar"></span>
+          <span class="dot minimizar"></span>
+          <span class="dot maximizar"></span>
+        </div>
       </div>
-    </section>
+      <div class="conteudo fetch-conteudo">
+        <!-- logo pop!_os simplificado em SVG -->
+        <svg class="logo-distro" viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="34" stroke="#f7768e" stroke-width="5"/>
+          <line x1="40" y1="6" x2="40" y2="22" stroke="#f7768e" stroke-width="5" stroke-linecap="round"/>
+          <path d="M26 62 Q40 74 54 62" fill="none" stroke="#f7768e" stroke-width="4" stroke-linecap="round"/>
+        </svg>
 
-    <!-- ======= DESIGN WEB ======= -->
-    <section>
-      <h2 class="section-title">🎨 Disciplina: Design Web (N1 e N2)</h2>
-      <div class="dw-grid">
-
-        <div class="dw-card">
-          <div class="thumb">🌐</div>
-          <div class="dw-body">
-            <div class="dw-title">Trabalho N1 — Telas HTML/CSS</div>
-            <div class="dw-desc">Diversas telas desenvolvidas em HTML e CSS puro explorando layouts, estilização e boas práticas de Design Web.</div>
+        <div class="fetch-info">
+          <p class="fetch-user"><span class="cor-blue">yago</span><span class="cor-fg">@</span><span class="cor-cyan">y4g0pop-os</span></p>
+          <p class="separador">─────────────────</p>
+          <p><span class="chave">OS     </span><span class="valor">Pop!_OS 24.04 LTS</span></p>
+          <p><span class="chave">WM     </span><span class="valor cor-purple">Hyprland</span></p>
+          <p><span class="chave">Shell  </span><span class="valor">fish</span></p>
+          <p><span class="chave">Editor </span><span class="valor">nvim</span></p>
+          <p><span class="chave">Kernel </span><span class="valor">7.0.11-pop</span></p>
+          <p><span class="chave">Repos  </span><span class="valor">12 públicos</span></p>
+          <p><span class="chave">Langs  </span><span class="valor">Python · JS · C</span></p>
+          <p><span class="chave">Foco   </span><span class="valor">IA · multi-agentes · web</span></p>
+          <p class="separador">─────────────────</p>
+          <!-- barra de cores do tema tokyo night -->
+          <div class="cor-bar">
+            <span style="background:#1a1b26"></span>
+            <span style="background:#f7768e"></span>
+            <span style="background:#9ece6a"></span>
+            <span style="background:#e0af68"></span>
+            <span style="background:#7aa2f7"></span>
+            <span style="background:#bb9af7"></span>
+            <span style="background:#7dcfff"></span>
+            <span style="background:#c0caf5"></span>
           </div>
         </div>
-
-        <div class="dw-card">
-          <div class="thumb">🪟</div>
-          <div class="dw-body">
-            <div class="dw-title">N2 — Metro UI</div>
-            <div class="dw-desc">Tela no estilo Windows 8 Metro UI com grid de tiles coloridos, ícones e informações dinâmicas.</div>
-          </div>
-        </div>
-
-        <div class="dw-card">
-          <div class="thumb">📊</div>
-          <div class="dw-body">
-            <div class="dw-title">N2 — Tabela de Jogos</div>
-            <div class="dw-desc">Catálogo de jogos com avaliação em estrelas, badges de gênero, ícones de check/cross e estilo responsivo.</div>
-          </div>
-        </div>
-
-        <div class="dw-card">
-          <div class="thumb">🖨️</div>
-          <div class="dw-body">
-            <div class="dw-title">N2 — 3D Model Printer App</div>
-            <div class="dw-desc">Aplicação SolidJS + Tailwind/DaisyUI montada via componentes (Sidebar, Rating, ProgressBar, Checkboxes).</div>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
 
-  </main>
+    <!-- coluna da direita: projetos + design web -->
+    <div class="col-dir">
 
-  <footer>
-    <p>© 2026 · Yago Macambira · <a href="https://github.com/y4g0o" style="color:var(--accent)">github.com/y4g0o</a></p>
-  </footer>
+      <!-- linha 1 de projetos -->
+      <div class="linha-proj">
+        <div class="janela" id="j-cdh">
+          <div class="titlebar">
+            <span class="titulo-janela">» C-D-H</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">Sistema multi-agente LangGraph implementando o Ciclo de Desambiguação Hierárquica (CDH). Benchmarked em 7 LLMs locais via Ollama.</p>
+            <div class="proj-tags">
+              <span class="tag">LangGraph</span><span class="tag">multi-agente</span><span class="tag">TCC</span><span class="tag">Python</span>
+            </div>
+            <a class="proj-link" href="https://github.com/y4g0o/C-D-H">github.com/y4g0o/C-D-H</a>
+          </div>
+        </div>
+
+        <div class="janela" id="j-cda">
+          <div class="titlebar">
+            <span class="titulo-janela">» C-D-A</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">Implementação e testes do ciclo de desambiguação hierárquica. Variações do protocolo CDH em diferentes configs de agentes.</p>
+            <div class="proj-tags">
+              <span class="tag">desambiguação</span><span class="tag">LLM</span><span class="tag">JS</span>
+            </div>
+            <a class="proj-link" href="https://github.com/y4g0o/C-D-A">github.com/y4g0o/C-D-A</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- linha 2 de projetos -->
+      <div class="linha-proj">
+        <div class="janela" id="j-tabnews">
+          <div class="titlebar">
+            <span class="titulo-janela">» clone-tabnews</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">App full-stack do zero inspirado no TabNews. Projeto pessoal pra aprimorar conhecimento em JS moderno.</p>
+            <div class="proj-tags">
+              <span class="tag">full-stack</span><span class="tag">JavaScript</span><span class="tag">do zero</span>
+            </div>
+            <a class="proj-link" href="https://github.com/y4g0o/clone-tabnews">github.com/y4g0o/clone-tabnews</a>
+          </div>
+        </div>
+
+        <div class="janela" id="j-lab">
+          <div class="titlebar">
+            <span class="titulo-janela">» lab</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">Estudos pessoais, experimentos com agentes locais e automações. Repositório de aprendizado contínuo.</p>
+            <div class="proj-tags">
+              <span class="tag">experimentos</span><span class="tag">Python</span><span class="tag">IA local</span>
+            </div>
+            <a class="proj-link" href="https://github.com/y4g0o/lab">github.com/y4g0o/lab</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- linha 3 de projetos -->
+      <div class="linha-proj">
+        <div class="janela" id="j-compilador">
+          <div class="titlebar">
+            <span class="titulo-janela">» compilador (yagolang)</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">Compilador académico para a linguagem yagolang. Análise léxica e sintática em Lex/Yacc.</p>
+            <div class="proj-tags">
+              <span class="tag">compiladores</span><span class="tag">Lex/Yacc</span><span class="tag">C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="janela" id="j-ia">
+          <div class="titlebar">
+            <span class="titulo-janela">» ia-assistente-pessoal</span>
+            <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+          </div>
+          <div class="conteudo proj-conteudo">
+            <p class="proj-desc">Assistente de IA pessoal automatizado para tarefas do dia a dia.</p>
+            <div class="proj-tags">
+              <span class="tag">automação</span><span class="tag">IA</span><span class="tag">PowerShell</span>
+            </div>
+            <a class="proj-link" href="https://github.com/y4g0o/ia-assistente-pessoal">github.com/y4g0o/ia-assistente</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- janela larga: disciplina design web (N1 e N2) -->
+      <div class="janela" id="j-dw">
+        <div class="titlebar">
+          <span class="titulo-janela">» Design Web — N1 &amp; N2</span>
+          <div class="dots"><span class="dot fechar"></span><span class="dot minimizar"></span><span class="dot maximizar"></span></div>
+        </div>
+        <div class="conteudo dw-conteudo">
+          <div class="dw-item">
+            <img src="../1-metro-ui/screenshot.png" alt="Metro UI" class="dw-thumb" />
+            <span class="dw-label">N2 · Metro UI</span>
+          </div>
+          <div class="dw-item">
+            <img src="../2-tabela/screenshot.png" alt="Tabela" class="dw-thumb" />
+            <span class="dw-label">N2 · Tabela</span>
+          </div>
+          <div class="dw-item">
+            <img src="../3-app-componentes/screenshot.png" alt="App Componentes" class="dw-thumb" />
+            <span class="dw-label">N2 · App (SolidJS)</span>
+          </div>
+          <div class="dw-item dw-n1">
+            <div class="dw-n1-placeholder">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+              <a href="https://github.com/y4g0o/Trabalho-desingweb" class="proj-link">Trabalho-desingweb</a>
+            </div>
+            <span class="dw-label">N1 · Telas HTML/CSS</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- fim col-dir -->
+
+  </div><!-- fim area -->
 
 </body>
 </html>

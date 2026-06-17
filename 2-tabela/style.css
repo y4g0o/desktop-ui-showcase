@@ -1,4 +1,4 @@
-/* ======= Tabela — Design Web N2 — Yago Macambira ======= */
+/* tabela de jogos — design web n2 — yago macambira */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #f0f2f5;
+  background: #eef1f5;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #1a1a2e;
   padding: 40px;
@@ -15,23 +15,24 @@ body {
 }
 
 h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 22px;
   color: #1e3a5f;
+  letter-spacing: -0.3px;
 }
 
 .tabela-wrapper {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.09);
   overflow: hidden;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 thead {
@@ -40,51 +41,56 @@ thead {
 }
 
 thead th {
-  padding: 12px 16px;
+  padding: 11px 16px;
   text-align: left;
   font-weight: 600;
-  letter-spacing: 0.4px;
   white-space: nowrap;
 }
 
 tbody tr {
-  border-bottom: 1px solid #e8ecf0;
-  transition: background 0.12s;
+  border-bottom: 1px solid #e4e9ef;
+  transition: background 0.1s;
 }
 
 tbody tr:nth-child(even) { background: #f7f9fb; }
-tbody tr:hover { background: #e3ecf7; }
+tbody tr:hover           { background: #deeaf6; }
 
 td {
-  padding: 11px 16px;
+  padding: 10px 16px;
   vertical-align: middle;
 }
 
-/* estrelas */
+/* estrelas — o span.vazia deixa a cor desaturada */
 .estrelas {
   color: #f5a623;
-  font-size: 1.05rem;
+  font-size: 1rem;
   letter-spacing: 1px;
-  white-space: nowrap;
 }
 
-/* check/x */
-.check  { color: #2e7d32; font-size: 1.1rem; }
-.cross  { color: #c62828; font-size: 1.1rem; }
+.estrelas .vazia { color: #d0d5db; }
 
-/* badge de gênero */
+/* icones check/x sao SVG — render consistente em qualquer SO */
+td.check { color: #2e7d32; }
+td.cross { color: #c62828; }
+
+td.check svg,
+td.cross svg {
+  display: block;
+}
+
+/* badges de genero */
 .badge {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 2px 9px;
   border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
-.badge-acao    { background: #fde8e8; color: #b71c1c; }
-.badge-rpg     { background: #e8f0fe; color: #1a237e; }
-.badge-plat    { background: #e8f5e9; color: #1b5e20; }
-.badge-indie   { background: #fff3e0; color: #bf360c; }
-.badge-sport   { background: #f3e5f5; color: #4a148c; }
-.badge-puzzle  { background: #e0f7fa; color: #006064; }
+.badge-acao   { background: #fde8e8; color: #b71c1c; }
+.badge-rpg    { background: #e8f0fe; color: #1a237e; }
+.badge-plat   { background: #e8f5e9; color: #1b5e20; }
+.badge-indie  { background: #fff3e0; color: #bf360c; }
+.badge-sport  { background: #f3e5f5; color: #4a148c; }
+.badge-puzzle { background: #e0f7fa; color: #006064; }
