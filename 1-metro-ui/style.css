@@ -1,4 +1,4 @@
-/* ======= Metro UI — Design Web N2 — Yago Macambira ======= */
+/* metro ui — design web n2 — yago macambira */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,100 +7,106 @@
 }
 
 body {
-  background: #1a1a2e;
+  background: #0e1117;
   font-family: 'Segoe UI', Arial, sans-serif;
   color: #fff;
-  min-height: 100vh;
-  padding: 32px;
+  padding: 36px 40px;
 }
 
-h1.titulo {
-  font-size: 2.4rem;
-  font-weight: 300;
+h1 {
+  font-size: 2.6rem;
+  font-weight: 200;
   letter-spacing: -1px;
-  margin-bottom: 28px;
-  color: #e0e0ff;
+  margin-bottom: 24px;
+  color: #f0f0f0;
 }
 
-.grid {
+/* grade principal — 6 colunas, 3 linhas, tudo preenchido */
+.grade {
   display: grid;
-  grid-template-columns: repeat(5, 140px);
+  grid-template-columns: repeat(6, 138px);
   grid-template-rows: repeat(3, 120px);
-  gap: 6px;
+  gap: 5px;
 }
 
-/* --- tiles --- */
+/* posicionamento explicito de cada tile */
+#proj    { grid-column: 1 / 3; grid-row: 1;     background: #1565C0; }
+#codigo  { grid-column: 3;      grid-row: 1;     background: #1B5E20; }
+#tarefas { grid-column: 4;      grid-row: 1 / 3; background: #4A148C; }
+#github  { grid-column: 5;      grid-row: 1;     background: #1C313A; }
+#ia      { grid-column: 6;      grid-row: 1;     background: #283593; }
+
+#term    { grid-column: 1;      grid-row: 2;     background: #006064; }
+#design  { grid-column: 2 / 4;  grid-row: 2;     background: #880E4F; }
+#comp    { grid-column: 5;      grid-row: 2;     background: #BF360C; }
+#lab     { grid-column: 6;      grid-row: 2;     background: #1A237E; }
+
+#banco   { grid-column: 1;      grid-row: 3;     background: #212121; }
+#facul   { grid-column: 2;      grid-row: 3;     background: #004D40; }
+#config  { grid-column: 3;      grid-row: 3;     background: #37474F; }
+#camera  { grid-column: 4;      grid-row: 3;     background: #B71C1C; }
+#pasta   { grid-column: 5;      grid-row: 3;     background: #E65100; }
+#editor  { grid-column: 6;      grid-row: 3;     background: #00695C; }
+
+/* tile base */
 .tile {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-end;
   padding: 10px 12px;
-  border-radius: 2px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: filter 0.15s;
   user-select: none;
+  transition: filter 0.12s;
 }
 
-.tile:hover { filter: brightness(1.15); }
-.tile:active { filter: brightness(0.85); }
+.tile:hover  { filter: brightness(1.18); }
+.tile:active { filter: brightness(0.8); }
 
-/* tile widths */
-.tile-wide  { grid-column: span 2; }
-.tile-tall  { grid-row: span 2; }
-
-/* colour themes */
-.t-blue      { background: #1e6eb4; }
-.t-teal      { background: #00897b; }
-.t-green     { background: #2e7d32; }
-.t-purple    { background: #6a1b9a; }
-.t-red       { background: #c62828; }
-.t-orange    { background: #e65100; }
-.t-pink      { background: #ad1457; }
-.t-indigo    { background: #283593; }
-.t-cyan      { background: #0277bd; }
-.t-dark      { background: #263238; }
-
-/* icon area */
-.tile-icon {
-  font-size: 2rem;
-  margin-bottom: 4px;
-  line-height: 1;
+/* icone svg fica no topo, crescendo ate preencher o espaco */
+.tile svg {
+  width: 36px;
+  height: 36px;
   flex: 1;
-  display: flex;
-  align-items: center;
+  align-self: flex-start;
+  margin-top: 8px;
+  opacity: 0.95;
 }
 
-.tile-wide .tile-icon { font-size: 2.4rem; }
+/* tiles largos (2 colunas) tem icone um pouco maior */
+#proj svg,
+#design svg {
+  width: 42px;
+  height: 42px;
+}
 
-.tile-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+/* rotulo no canto inferior esquerdo */
+.rotulo {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
 }
 
-/* badge */
-.badge {
+/* texto menor do tile de projetos (tipo live tile) */
+.sub {
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+}
+
+/* badge de notificacao no tile de tarefas */
+.notif {
   position: absolute;
-  top: 6px;
-  right: 8px;
-  background: rgba(255,255,255,0.25);
-  border-radius: 2px;
+  top: 8px;
+  right: 10px;
+  background: rgba(255,255,255,0.22);
   font-size: 0.65rem;
   font-weight: bold;
-  padding: 1px 5px;
-}
-
-/* special tile: wide + live info */
-.tile-live .live-info {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.8);
-  margin-top: 2px;
+  padding: 1px 6px;
+  letter-spacing: 0.5px;
 }
